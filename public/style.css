@@ -9,3 +9,15 @@
 .button, legend {
   text-align: center;
 }
+
+.myContainer {
+  position: fixed;
+}
+
+.myList {
+  padding-top: 400px;
+}
+
+.myList table {
+  background-color: white
+}
