@@ -10,6 +10,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-grid.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
@@ -19,156 +21,175 @@
 
 <body>
     <div class="container">
-
-        <form class="well form-horizontal" action="/createPhoneBook" method="post" id="contact_form">
-            <fieldset>
-
-                <!-- Form Name -->
-                <legend>Phonebook</legend>
-
-                <!-- Text input-->
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">First Name</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-user"></i>
-                            </span>
-                            <input name="first_name" placeholder="First Name" class="form-control" type="text" required>
+        <div class="col">
+                <form class="well form-horizontal" action="/createPhoneBook" method="post" id="contact_form">
+                    <fieldset>
+        
+                        <!-- Form Name -->
+                        <legend>Phonebook</legend>
+        
+                        <!-- Text input-->
+        
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">First Name</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                    <input name="first_name" placeholder="First Name" class="form-control" type="text" required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Text input-->
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Last Name</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-user"></i>
-                            </span>
-                            <input name="last_name" placeholder="Last Name" class="form-control" type="text" required>
+        
+                        <!-- Text input-->
+        
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Last Name</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                    </span>
+                                    <input name="last_name" placeholder="Last Name" class="form-control" type="text" required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Text input-->
-                <div class="form-group">
-                    <label class="col-md-4 control-label">E-Mail</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-envelope"></i>
-                            </span>
-                            <input name="email" placeholder="E-Mail Address" class="form-control" type="email" required>
+        
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">E-Mail</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-envelope"></i>
+                                    </span>
+                                    <input name="email" placeholder="E-Mail Address" class="form-control" type="email" required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Text input-->
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Phone #</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-earphone"></i>
-                            </span>
-                            <input name="phone" placeholder="(845)555-1212" class="form-control" type="number" required>
+        
+                        <!-- Text input-->
+        
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Phone #</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-earphone"></i>
+                                    </span>
+                                    <input name="phone" placeholder="(845)555-1212" class="form-control" type="number" required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Text input-->
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">Address</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-home"></i>
-                            </span>
-                            <input name="address" placeholder="Address" class="form-control" type="text" required>
+        
+                        <!-- Text input-->
+        
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Address</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-home"></i>
+                                    </span>
+                                    <input name="address" placeholder="Address" class="form-control" type="text" required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Text input-->
-
-                <div class="form-group">
-                    <label class="col-md-4 control-label">City</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-home"></i>
-                            </span>
-                            <input name="city" placeholder="city" class="form-control" type="text" required>
+        
+                        <!-- Text input-->
+        
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">City</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-home"></i>
+                                    </span>
+                                    <input name="city" placeholder="city" class="form-control" type="text" required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label"></label>
-                    <div class="button col-md-4">
-                        <button type="submit" class="btn btn-warning">Add Contats
-                            <span class="glyphicon glyphicon-send"></span>
-                        </button>
-                    </div>
-                </div>
-
-            </fieldset>
-        </form>
-        <% if(phoneBook) { %>
-            <table class="table">
-                <thead class="thead-inverse">
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>E-Mail</th>
-                        <th>Phone #</th>
-                        <th>Address</th>
-                        <th>City</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            <%= phoneBook.first_name%>
-                        </td>
-                        <td>
-                            <%= phoneBook.last_name%>
-                        </td>
-                        <td>
-                            <%= phoneBook.email%>
-                        </td>
-                        <td>
-                            <%= phoneBook.phone%>
-                        </td>
-                        <td>
-                            <%= phoneBook.address%>
-                        </td>
-                        <td>
-                            <%= phoneBook.city%>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Deletar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <% } else if(false) { %>
-
-                <% } %>
-
+        
+        
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label"></label>
+                            <div class="button col-md-4">
+                                <button type="submit" class="btn btn-warning">Add Contats
+                                    <span class="glyphicon glyphicon-send"></span>
+                                </button>
+                            </div>
+                        </div>
+        
+                    </fieldset>
+                </form>
+        </div>
+        <div class="col">
+                <% if(phoneBooks) { %>
+                    <table class="table">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>E-Mail</th>
+                                <th>Phone #</th>
+                                <th>Address</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i=0; i<phoneBooks.length; i++) {%>
+                                <tr>
+                                    <th scope="row">
+                                        <%= i+1 %>
+                                    </th>
+                                    <td>
+                                        <%= phoneBooks[i].first_name%>
+                                    </td>
+                                    <td>
+                                        <%= phoneBooks[i].last_name%>
+                                    </td>
+                                    <td>
+                                        <%= phoneBooks[i].email%>
+                                    </td>
+                                    <td>
+                                        <%= phoneBooks[i].phone%>
+                                    </td>
+                                    <td>
+                                        <%= phoneBooks[i].address%>
+                                    </td>
+                                    <td>
+                                        <%= phoneBooks[i].city%>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" id="delete">Editar</button>
+                                        <button type="button" class="btn btn-danger">Deletar</button>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+                    <% } else if(false) { %>
+        
+                    <% } %>
+        </div>
     </div>
-    </div>
+
+    <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                One of three columns
+              </div>
+              <div class="col-sm">
+                One of three columns
+              </div>
+              <div class="col-sm">
+                One of three columns
+              </div>
+            </div>
+          </div>
     <!-- /.container -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
