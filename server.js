@@ -8,6 +8,7 @@ var db
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('public'))
+app.use(bodyParser.json())
 
 //templates
 app.set('views', path.join(__dirname, 'public'))
@@ -41,4 +42,12 @@ app.post('/createPhoneBook', (request, response) => {
 })
 
 //update
+app.put('/update', (req, res) => {
+    db.collection('phoneBook')
+  .findOneAndUpdate({name: 'Santos'}, {
+    $rename: {
+      'Santos': '007',
+    }
+})
+})
 //delete phoneBook
