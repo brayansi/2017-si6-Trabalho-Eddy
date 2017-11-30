@@ -13,7 +13,6 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.js">
     <title>Agenda de Contatos</title>
 </head>
 
@@ -158,8 +157,8 @@
                                     <%= phoneBooks[i].city%>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" id="update">Editar</button>
-                                    <button type="button" class="btn btn-danger" id="delete">Deletar</button>
+                                    <button type="button" class="btn btn-primary">Editar</button>
+                                    <button type="button" class="btn btn-danger" onclick="remove('<%= phoneBooks[i].first_name%>')">Deletar</button>
                                 </td>
                             </tr>
                             <% } %>
@@ -170,10 +169,6 @@
         </div>
     </div>
     <script src="main.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-
 </body>
 
 </html>

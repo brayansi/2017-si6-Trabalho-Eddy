@@ -2,7 +2,7 @@ const express = require('express')
 const MongoClient = require('mongodb').MongoClient;
 const app = express()
 const path = require('path')
-const PORT =  process.env.PORT
+const PORT = process.env.PORT
 var db
 //express setup
 const bodyParser = require('body-parser')
@@ -17,8 +17,7 @@ app.set('view engine', 'ejs')
 
 //get list phoneBook
 app.get('/', (request, response) => {
-    var cursor = db.collection('phoneBook').find().toArray(function(err, results){
-        console.log(results);
+    var cursor = db.collection('phoneBook').find().toArray(function (err, results) {
         const data = { phoneBooks: results, submitted: false }
         response.render('index', data)
     })
@@ -28,7 +27,7 @@ MongoClient.connect('mongodb://tulio:123456789@ds119486.mlab.com:19486/phonebook
     if (err) return console.log('errrrrrrrrrrrrrroooooooo')
     db = database
     app.listen(PORT, () => {
-      console.log('listening on 3000')
+        console.log('listening on 3000')
     })
 })
 
@@ -44,10 +43,23 @@ app.post('/createPhoneBook', (request, response) => {
 //update
 app.put('/update', (req, res) => {
     db.collection('phoneBook')
-  .findOneAndUpdate({name: 'Santos'}, {
-    $rename: {
-      'Santos': '007',
-    }
-})
+        .findOneAndUpdate({ name: 'Santos' }, {
+            $rename: {
+                'Santos': '007',
+            }
+        })
 })
 //delete phoneBook
+app.delete('/delete', (req, res) => {
+    db.collection('phoneBook').deleteOne({ first_name: req.body.name },
+        (err, result) => {
+            if (err) return res.send(500, err)
+            res.send({ message: 'ok' })
+        })
+})
+
+
+
+module.exports = app;
+
+
